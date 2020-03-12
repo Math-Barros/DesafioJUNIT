@@ -51,3 +51,21 @@ class JulgamentoPrisioneiroTest {
 		assertEquals(10, penaSuspeitoB);
 
 	}
+
+	@Test
+	public void testeCalculaPena4() {
+
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+
+		Resposta respostaSuspeitoA = Resposta.NEGACAO;
+		Resposta respostaSuspeitoB = Resposta.NEGACAO;
+
+		int penaSuspeitoA = jp.calculaPena(respostaSuspeitoA, respostaSuspeitoB);
+		int penaSuspeitoB = jp.calculaPena(respostaSuspeitoB, respostaSuspeitoA);
+
+		assertEquals(11, penaSuspeitoA);
+		assertEquals(11, penaSuspeitoB);
+
+	}
+
+}
