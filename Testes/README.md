@@ -31,9 +31,23 @@ class JulgamentoPrisioneiroTest {
 		int penaSuspeitoA = jp.calculaPena(respostaSuspeitoA, respostaSuspeitoB);
 		int penaSuspeitoB = jp.calculaPena(respostaSuspeitoB, respostaSuspeitoA);
 
-		assertEquals(15, penaSuspeitoA);
-		assertEquals(15, penaSuspeitoB);
+		assertEquals(10, penaSuspeitoA);
+		assertEquals(10, penaSuspeitoB);
 
 	}
 
-}
+	@Test
+	public void testeCalculaPena3() {
+
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+
+		Resposta respostaSuspeitoA = Resposta.NEGACAO;
+		Resposta respostaSuspeitoB = Resposta.DELACAO;
+
+		int penaSuspeitoA = jp.calculaPena(respostaSuspeitoA, respostaSuspeitoB);
+		int penaSuspeitoB = jp.calculaPena(respostaSuspeitoB, respostaSuspeitoA);
+
+		assertEquals(10, penaSuspeitoA);
+		assertEquals(10, penaSuspeitoB);
+
+	}
