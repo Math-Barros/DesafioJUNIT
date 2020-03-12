@@ -2,20 +2,37 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import JulgamentoPrisioneiro.Resposta;
-
 class JulgamentoPrisioneiroTest {
 
 	@Test
-	public void testeCalculaPena() {
+	public void testeCalculaPena1() {
 
 		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
 
 		Resposta respostaSuspeitoA = Resposta.DELACAO;
 		Resposta respostaSuspeitoB = Resposta.DELACAO;
 
-		int penaSuspeitoA = jp.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);
-		int penaSuspeitoB = jp.calculaPena(respostaPrisioneiroB, respostaPrisioneiroA);
+		int penaSuspeitoA = jp.calculaPena(respostaSuspeitoA, respostaSuspeitoB);
+		int penaSuspeitoB = jp.calculaPena(respostaSuspeitoB, respostaSuspeitoA);
+
+		assertEquals(15, penaSuspeitoA);
+		assertEquals(15, penaSuspeitoB);
+
+	}
+
+	@Test
+	public void testeCalculaPena2() {
+
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+
+		Resposta respostaSuspeitoA = Resposta.DELACAO;
+		Resposta respostaSuspeitoB = Resposta.NEGACAO;
+
+		int penaSuspeitoA = jp.calculaPena(respostaSuspeitoA, respostaSuspeitoB);
+		int penaSuspeitoB = jp.calculaPena(respostaSuspeitoB, respostaSuspeitoA);
+
+		assertEquals(15, penaSuspeitoA);
+		assertEquals(15, penaSuspeitoB);
 
 	}
 
