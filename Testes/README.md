@@ -2,11 +2,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import JulgamentoPrisioneiro.Resposta;
+
 class JulgamentoPrisioneiroTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testeCalculaPena() {
+
+		Resposta respostaSuspeitoA = Resposta.DELACAO;
+		Resposta respostaSuspeitoB = Resposta.DELACAO;
+
 	}
 
 }
